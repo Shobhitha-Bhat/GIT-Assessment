@@ -1,0 +1,120 @@
+git init
+git add .
+git commit
+git --version
+git commit "commit msg"
+
+
+md file-markdown
+
+git init
+git add .
+
+U = untracked
+
+A = index added added to git and git is tracing it
+
+M = modified......
+
+git commit -m "message"
+
+git commit -am "meassage" (adding and commiting together"
+
+git status
+
+git push     
+
+error that occurs that if location not mentioned (Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name)
+
+git log
+(commit hash)
+
+git log --oneline
+
+git log --graph
+git log --oneline --graph
+
+git log --oneline --graph --author="Shobhitha"
+
+
+-- flags   -(
+- single character
+--multiple characters...
+
+
+git log --author="Shobhitha"
+
+commits by someone from some range of time
+git log --after="2024-06-07"
+git log --before="2024-06-07"
+
+
+git stash
+  not committed changes are removed and put into stack
+git stash pop
+
+
+git checkout (hashvalue)    at the bottom we can see the value changed to hash -- to go back in the timeline
+this goes to some  previous commit
+if u do changes here and u commit the log changes
+
+avoid checking out master or head because that does do anything
+
+git checkout master
+git switch master
+
+CREATING NEW BRANCH
+git checkout -b new-branch
+
+add and commit from this new branch
+and then go back to master
+upstream master
+
+git checkout masters
+
+MERGE CONFLICTS
+make some changes from master in the same line that was done in a new branch
+add and commit
+now merge with the branch
+
+git merge new-branch
+PS C:\Users\Admin\Desktop\Mastering Git> git merge new-branch
+Auto-merging helllo.c
+CONFLICT (content): Merge conflict in helllo.c
+Automatic merge failed; fix conflicts and then commit the result.
+
+#include<stdbool.h>
+int main(){
+<<<<<<< HEAD
+    int anotherint;
+=======
+    int b;//from new branch
+>>>>>>> new-branch
+    int a;
+    return 0;
+}
+
+
+CHERRY PICKING
+
+go to a newbranch
+do some commits
+copy the hash
+go to master
+
+
+git cherry-pick <hash-value>
+
+
+
+
+git remove -v
+
+edit access matters
+
+pull request
+let  the owner get a request to make changes that the other one made
